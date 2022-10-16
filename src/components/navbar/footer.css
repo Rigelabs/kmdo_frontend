@@ -1,0 +1,56 @@
+.footer{
+   background-color: rgb(100, 215, 253);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color:white;
+    display: flex;
+    justify-content:space-between ;
+}
+.counter{
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    justify-content:space-between ;
+    margin: 5rem 1rem 0 2rem;
+    flex-wrap: wrap;
+}
+.counter-div{
+    text-align: center;
+}
+.copyright{
+    display: flex;
+   
+    margin: 1rem;
+    text-align:center;
+}
+.in_touch{
+    display: flex;
+   
+    margin: 1rem;
+    text-align:center;
+}
+@media only screen and (max-width:1200px) {
+    .footer{
+        background-color: lightblue;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        min-height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between ;
+    } 
+    .counter{
+        font-size: 18px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        align-content:space-between ;
+        margin: 5rem 1rem 0 2rem;
+       
+    }
+    .counter-div{
+        text-align: center;
+    }
+}

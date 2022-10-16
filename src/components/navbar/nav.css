@@ -1,0 +1,39 @@
+.nav{
+    background: rgb(108,126,212);
+    background: linear-gradient(90deg, rgba(108,126,212,1) 0%, rgba(29,253,209,1) 52%, rgba(69,252,84,1) 100%);
+
+}
+.brand-name{
+    font-size:28px;
+    font-weight: 700;
+    color: rgb(241, 228, 228);
+}
+.nav-menu{
+    display:'flex';
+    flex-direction: row;
+    justify-content:right;
+}
+.nav-links{
+    font-size:18px;
+    color:darkblue;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.nav-links:hover{
+    -ms-transform: scaleY(1.2); /* IE 9 */
+    transform: scaleY(1.2); 
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+.donate-button{
+    margin-left: 5rem;
+    width: 5rem;
+}
+
+@media only screen and (max-width:1200px) {
+    .brand-name{
+        font-size:20px;
+        font-weight: 700;
+        color: rgb(241, 228, 228);
+    }
+}

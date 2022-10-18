@@ -1,0 +1,1 @@
+export const SET_AUTH_PAGE="SET_AUTH_PAGE";

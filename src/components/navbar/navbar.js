@@ -24,7 +24,7 @@ export default function NavBar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="responsive-navbar-nav" > 
-        <div style={{marginRight:'20vw'}}>{" "}</div>
+        <div style={{marginRight:'5rem'}}>{" "}</div>
         <Nav
             className="me-auto my-2 my-lg-0"
             navbarScroll
@@ -35,6 +35,7 @@ export default function NavBar() {
             <Nav.Link className="nav-links" href="/impact">Our Impact</Nav.Link>
             <Nav.Link className="nav-links" href="/reports">Reports</Nav.Link>
             <Nav.Link className="nav-links" href="/contact_us">Get in touch</Nav.Link>
+            <Nav.Link className="nav-links" href="/membership">Membership</Nav.Link>
             <Button onClick={e=>navigate("/donate")} className='donate-button' >Donate</Button>
             </Nav>
            

@@ -1,7 +1,9 @@
-import React from 'react'
-import { Button, Card, Form } from 'react-bootstrap'
+import React from 'react';
+import { Button, Card, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 export default function Signin() {
+  const navigate=useNavigate();
   return (
     <div className='signin'>
           <Card className='sign-card'>
@@ -11,11 +13,9 @@ export default function Signin() {
             <div style={{margin:"10px"}}>
         <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Phone Number</Form.Label>
-        <Form.Control type="email" placeholder="Enter phone number" />
-        <Form.Text className="text-muted">
-          We'll never share your phone number with anyone else.
-        </Form.Text>
+        <Form.Label className='form-label'>Phone Number</Form.Label>
+        <Form.Control type="text" placeholder="Enter phone number" />
+        
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -26,7 +26,12 @@ export default function Signin() {
       <Button variant="primary" type="submit">
         Sign In
       </Button>
+      
         </Form>
+        <div style={{marginTop:"1rem",display:'flex',flexDirection:'row', justifyContent:"space-between"}}>
+          <div className='form-link' onClick={e=>navigate("/sign_up")}>New Member ?</div>
+          <div className='form-link' onClick={e=>navigate("/reset")}>Reset password</div>
+        </div>
         </div>
         </Card>
     </div>

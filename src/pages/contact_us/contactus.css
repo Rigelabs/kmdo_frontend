@@ -1,10 +1,17 @@
 .main{
-    margin-top: 8rem;
+    margin-top: 4.5rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
-    color:teal;
+    color:green;
+    background-image: url('https://res.cloudinary.com/dwnxsji2z/image/upload/v1666096565/website%20files/Disk-2s-1704px_fh9qtg.png');
+   
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
+.address{
+    margin: 1rem;
+    color: white;
+}
 .top-social{
     display: flex;
     flex-direction: column;

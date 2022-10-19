@@ -9,19 +9,30 @@ export default function Reset() {
         <div className='auth'>
             <NavBar />
             <div className='signin'>
-                <Card className='sign-card'>
+                <Card className='reset-card'>
                     <div className='logo-form'>
                         <img width="100px" height="100px" src='https://res.cloudinary.com/dwnxsji2z/image/upload/v1665880877/logo/icon-transparent_qdcqo9.ico' alt="" />
                     </div>
                     <div style={{ margin: "10px" }}>
                         <Form>
+                       
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className='form-label'>Phone Number</Form.Label>
                                 <Form.Control type="text" placeholder="Enter phone number" />
 
                             </Form.Group>
+                            <Button variant="success" type="submit">
+                                Request OTP Code
+                            </Button>
+                          
+                            
+                            </Form>
+                            
+                            <hr/>
+
+                            <Form>
                             <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Password</Form.Label>
+                                <Form.Label>New Password</Form.Label>
                                 <Form.Control type="password" placeholder="Password" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicPassword">

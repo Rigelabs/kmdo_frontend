@@ -24,7 +24,7 @@ export const userRegister = ({ contact, full_name,village,area,occupation,
             email:email,village:village,area:area,occupation:occupation,
             registration_number:registration_number,password:password
         }
-        await axios.post(`${host}auth/user/create`,data, config)
+        await axios.post(`https://kmdo-backend.onrender.com/auth/user/create`,data, config)
 
             .then(res => {
                 dispatch({ type: actions.REGISTER_SUCCESS, payload: res.data })
@@ -59,7 +59,7 @@ export const userLogin = ({ contact,password }) => async (dispatch) => {
         const data={
            contact:contact,password:password
         }
-        await axios.post(`${host}auth/user/login`,data, config)
+        await axios.post(`https://kmdo-backend.onrender.com/auth/user/login`,data, config)
 
             .then(res => {
                 dispatch({ type: actions.LOGGING_USER_SUCCESS, payload: res.data })

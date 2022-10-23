@@ -14,7 +14,7 @@ export const loadVillages = () => async (dispatch) => {
         },
       
     }
-    await axios.get(`${host}village/all`,config)
+    await axios.get(`https://kmdo-backend.onrender.com/village/all`,config)
         .then(res => dispatch({
             type: actions.LOAD_VILLAGES,
             payload: res.data
@@ -50,7 +50,7 @@ export const loadAreas = () => async (dispatch) => {
         },
       
     }
-    await axios.get(`${host}village/areas/all`,config)
+    await axios.get(`https://kmdo-backend.onrender.com/village/areas/all`,config)
         .then(res => dispatch({
             type: actions.LOAD_AREAS,
             payload: res.data

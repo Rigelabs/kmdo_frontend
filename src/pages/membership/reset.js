@@ -1,27 +1,68 @@
-import React from 'react';
-import { Button, Card, Form } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Alert, Button, Card, Form, InputGroup } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { change_password, request_code } from '../../actions/authActions';
+import { clearErrors } from '../../actions/errorActions';
 import NavBar from '../../components/navbar/navbar';
 
 export default function Reset() {
     const navigate = useNavigate();
+    const dispatch=useDispatch();
+    const errors=useSelector(state=>state.errors);
+    const success=useSelector(state=>state.success);
+    const auth=useSelector(state=>state.auth);
+
+    const [contact, setcontact] = useState(null);
+    const [password, setpassword] = useState(null);
+    const [confirm_password, setconfirm_password] = useState(null);
+    const [otp_code, setotp_code] = useState(null);
+
+    const onRequestCode=(e)=>{
+        e.preventDefault();
+        dispatch(clearErrors());
+        dispatch(request_code({contact:`+254${contact}`}));
+    }
+    const onChangePassword=(e)=>{
+        e.preventDefault();
+        dispatch(clearErrors());
+        dispatch(change_password({contact:`+254${contact}`,password:password,otp_code:otp_code}));
+    }
+    useEffect(() => {
+        if(auth.token&&auth.isAuthenticated&&auth.user){
+            navigate("/dashboard")
+          }
+    }, [auth.isAuthenticated])
+    
     return (
         <div className='auth'>
             <NavBar />
             <div className='signin'>
                 <Card className='reset-card'>
+                {Object.keys(errors.msg).length>0?
+                        <Alert variant='danger'>{errors.msg.message}</Alert>
+              
+                : null
+            }
+             {Object.keys(success.msg).length>0?
+                        <Alert variant='success'>{success.msg.message}</Alert>
+              
+                : null
+            }
                     <div className='logo-form'>
                         <img width="100px" height="100px" src='https://res.cloudinary.com/dwnxsji2z/image/upload/v1665880877/logo/icon-transparent_qdcqo9.ico' alt="" />
                     </div>
                     <div style={{ margin: "10px" }}>
-                        <Form>
+                        <Form onSubmit={onRequestCode}>
                        
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className='form-label'>Phone Number</Form.Label>
-                                <Form.Control type="text" placeholder="Enter phone number" />
-
+                                <InputGroup>
+                                <InputGroup.Text id="basic-addon1">+254</InputGroup.Text>
+                                <Form.Control type="text" placeholder="700000000" onChange={e=>{setcontact(e.currentTarget.value)}}/>
+                                </InputGroup>
                             </Form.Group>
-                            <Button variant="success" type="submit">
+                            <Button variant="success" type="submit" disabled={auth.isLoading||!contact?true:false}>
                                 Request OTP Code
                             </Button>
                           
@@ -30,17 +71,20 @@ export default function Reset() {
                             
                             <hr/>
 
-                            <Form>
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form onSubmit={onChangePassword}>
+                            <Form.Group className="mb-3">
                                 <Form.Label>New Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
+                                <Form.Control type="password" placeholder="Password"  onChange={e=>{setpassword(e.currentTarget.value)}}/>
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Group className="mb-3" >
                                 <Form.Label>Confirm Password</Form.Label>
-                                <Form.Control type="password" placeholder="Confirm Password" />
+                                <Form.Control type="password" placeholder="Confirm Password"  onChange={e=>{setconfirm_password(e.currentTarget.value)}}/>
                             </Form.Group>
-
-                            <Button variant="primary" type="submit">
+                            <Form.Group className="mb-3">
+                                <Form.Label>OTP Code</Form.Label>
+                                <Form.Control  placeholder="Enter OTP Code"  onChange={e=>{setotp_code(e.currentTarget.value)}}/>
+                            </Form.Group>
+                            <Button variant="primary" type="submit" disabled={password===confirm_password&&otp_code&&contact ? false:true}>
                                 Reset Password
                             </Button>
 

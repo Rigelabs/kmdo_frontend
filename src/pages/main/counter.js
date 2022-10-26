@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup/';
-import "./footer.css";
+import "./main.css";
 
 export default function Counter() {
   return (

@@ -39,6 +39,22 @@
     border-top-left-radius: 20px;
 }
 
+.modal-corousel {
+    width: 100%;
+    min-height: 100%;
+    background-color: whitesmoke;
+    box-shadow: rgba(57, 57, 232, 0.25) 0px 30px 60px -30px inset, rgba(104, 196, 226, 0.3) 0px 18px 36px -30px inset;
+   
+}
+.update-modal-title{
+    display:flex;
+    justify-content:space-between;
+    color:teal;
+    font-weight:700;
+    margin-bottom:1rem;
+    width:100%;
+    font-size: 20px;
+}
 .member-button {
     bottom: 5rem;
     right: 55vw;

@@ -24,21 +24,18 @@ export default function NavBar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="responsive-navbar-nav" > 
-        <div style={{marginRight:'5rem'}}>{" "}</div>
+        <div style={{marginRight:'10rem'}}>{" "}</div>
         <Nav
             className="me-auto my-2 my-lg-0"
             navbarScroll
           >
-           
-            <Nav.Link className="nav-links" href="/about_us">Who We Are</Nav.Link>
-           
             <Nav.Link className="nav-links" href="/impact">Our Impact</Nav.Link>
-            <Nav.Link className="nav-links" href="/reports">Reports</Nav.Link>
+            <Nav.Link className="nav-links" href="/about_us">Who We Are</Nav.Link>
             <Nav.Link className="nav-links" href="/contact_us">Get in touch</Nav.Link>
             <Nav.Link className="nav-links" href="/membership">Membership</Nav.Link>
-            <Button onClick={e=>navigate("/donate")} className='donate-button' >Donate</Button>
+            
             </Nav>
-           
+            <Button onClick={e=>navigate("/donate")} className='donate-button' >Donate</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

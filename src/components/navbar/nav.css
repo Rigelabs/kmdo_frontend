@@ -11,7 +11,7 @@
 .nav-menu{
     display:'flex';
     flex-direction: row;
-    justify-content:right;
+    justify-content:flex-end;
 }
 .nav-links{
     font-size:18px;
@@ -26,7 +26,7 @@
     text-decoration-color: green;
 }
 .donate-button{
-    margin-left: 8rem;
+    
     width: 5rem;
 }
 

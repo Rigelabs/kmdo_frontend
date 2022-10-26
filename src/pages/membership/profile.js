@@ -43,17 +43,18 @@ export default function Profile() {
                   
                         <Card border={"dark"} hoverable className='dashboard-card-table' >
                             <h1 style={{color:"teal"}}>Member Contribution</h1>
-                            <Table striped bordered hover responsive>
+                            <Table striped bordered hover>
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Transaction ID</th>
-                                        <th>Event ID</th>
-                                        <th>Sender Name</th>
-                                        <th>Receiver Name</th>
+                                        <th>Transaction_ID</th>
+                                        <th>Event_ID</th>
+                                        <th>Sender_Name</th>
+                                        <th>Receiver_Name</th>
                                         <th>Amount</th>
-                                        <th>Date</th>
+                                        <th>Transaction_Date</th>
                                         <th>Method</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>

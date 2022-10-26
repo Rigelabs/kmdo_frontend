@@ -3,6 +3,7 @@ import ContactUs from "./pages/contact_us/contact_us";
 import NotFound from "./pages/errors/404";
 import Main from "./pages/main";
 import Auth from "./pages/membership/auth";
+import Dashboard from "./pages/membership/dashboard";
 import Landing from "./pages/membership/landing";
 import Reset from "./pages/membership/reset";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/membership' element={<Auth />} />
         <Route path="/reset" element={<Reset/>}/>
         <Route path='/sign_up' element={<Landing />} />
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

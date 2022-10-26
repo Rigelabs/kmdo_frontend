@@ -143,3 +143,37 @@ export const change_password = ({ contact,password,otp_code }) => async (dispatc
                 }
             })
     }
+
+//check token and load user
+export const loadUser = (authToken) => async (dispatch) => {
+    //User Loading
+    dispatch({ type: actions.LOADING_USER });
+   
+    try {
+        if (authToken) {
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': "Bearer " + authToken
+                }
+            }
+            await axios.get(`https://kmdo-backend.onrender.com/auth/user/`, config)
+                .then(res => {
+                    dispatch({
+                        type: actions.USER_LOADING_SUCCESS,
+                        payload: res.data
+                    });
+                }).catch(error => {
+                    dispatch(
+                        returnErrors(error.response.data, error.response.status, "LOADING-USER-ERROR")
+                    );
+                    dispatch({ type: actions.USER_LOADING_ERROR })
+
+                })
+        }
+    } catch (error) {
+        dispatch({ type: actions.USER_LOADING_ERROR })
+    }
+
+
+};

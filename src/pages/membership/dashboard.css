@@ -1,0 +1,62 @@
+.dashboard-menu{
+    width: 100vw;
+    margin-top: 4.8rem;
+    display: flex;
+    overflow-x: auto;
+    margin-left: -5px;
+    
+}
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dashboard-avatar{
+    display: flex;
+    justify-content: center;
+}
+.dashboard-score{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 900;
+    font-size: 32px;
+    color: darkblue;
+    margin-right:10px;
+}
+.dashboard-card-profile{
+    width:40vw;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+}
+.dashboard-card-table{
+    width:60vw;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+}
+.h3{
+    margin:10px 0px 20px 10px;
+}
+@media only screen and (max-width:1200px) {
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+       
+        width: 90vw;
+        margin-left: -5px;
+    }
+    
+    .dashboard-card-profile{
+        width:90vw;
+        overflow-x: auto;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    }
+    .dashboard-card-table{
+        width:90vw;
+       overflow-x: auto;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    }
+}

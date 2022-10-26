@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import "./main.css";
 
 export default function Corousel() {
     const [index, setIndex] = useState(0);
@@ -7,14 +8,16 @@ export default function Corousel() {
     const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
-  
+    const device_height =window.innerHeight;
+   
     return (
         <div className='carousel'>
       <Carousel activeIndex={index} onSelect={handleSelect} >
+        
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            height={'600px'}
+            className="carousel-image"
+            
             src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1666758419/student_girls_wziylf.jpg"
             alt="First slide"
           />
@@ -25,8 +28,7 @@ export default function Corousel() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            height={'600px'}
+          className="carousel-image"
             src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1666758277/old_disadvantaged_b9mrnb.jpg"
             alt="Second slide"
           />
@@ -38,8 +40,7 @@ export default function Corousel() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            height={'600px'}
+            className="carousel-image"
             src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1666758050/students_zy8fk9.jpg"
             alt="Third slide"
           />
@@ -53,8 +54,7 @@ export default function Corousel() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            height={'600px'}
+            className="carousel-image"
             src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1666758556/disadvantaged_ukrsqw.jpg"
             alt="Fourth slide"
           />
@@ -68,8 +68,7 @@ export default function Corousel() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            height={'600px'}
+          className="carousel-image"
             src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1666758756/baby_view_hrqstk.jpg"
             alt="Third slide"
           />

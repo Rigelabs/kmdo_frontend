@@ -13,13 +13,14 @@ export default function Dashboard() {
     const navigate=useNavigate();
 
     const utilities=useSelector(state=>state.utilities);
+    const user=useSelector(state=>state.auth.user);
     const tab=utilities.dashboard_tab;
     const [current_tab, setcurrent_tab] = useState(tab);
 
     const ondash_tab=(value)=>{
         dispatch(setDashTab(value));
     }
-
+ 
     return (
 
         < >
@@ -31,7 +32,9 @@ export default function Dashboard() {
                         <Button onClick={e=>{ondash_tab("events");setcurrent_tab("events")}}>Events</Button>
                         <Button  onClick={e=>{ondash_tab("members");setcurrent_tab("members")}}>Members</Button>
                         <Button  onClick={e=>{ondash_tab("gallery");setcurrent_tab("gallery")}}>Gallery</Button>
-                        <Button onClick={e=>navigate("/admin")}>Admin</Button>
+                       {user?user.rank==="MEMBER"?
+                       null
+                        :<Button onClick={e=>navigate("/admin")}>Admin</Button>:null}
                     </ButtonGroup>
                 </ButtonToolbar>
             </div>

@@ -1,9 +1,8 @@
-import {
-    SET_AUTH_PAGE, SET_DASH_TAB
-} from "../actions/types";
+import { SET_ADMIN_TAB, SET_AUTH_PAGE, SET_DASH_TAB } from "../actions/types";
 const initialState ={
     auth_page:"sign_in",
-    dashboard_tab:"account"
+    dashboard_tab:"account",
+    admin_tab:"members"
 }
 
 export default function utilitiesReducer(state=initialState, action){
@@ -14,6 +13,9 @@ export default function utilitiesReducer(state=initialState, action){
         }
         case SET_DASH_TAB: return{
             ...state,dashboard_tab:action.payload
+        }
+        case SET_ADMIN_TAB: return{
+            ...state,admin_tab:action.payload
         }
         default:
              return state

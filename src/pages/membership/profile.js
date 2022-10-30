@@ -65,10 +65,8 @@ export default function Profile() {
 
 
                                 <Button variant="outline-success" onClick={e => setupdate_modal(!update_modal)}>Update Account</Button>
-                                <Button variant="outline-danger" onClick={e => dispatch(logout({user_id:auth.user?auth.user._id:null}))}>Logout</Button>
-                              
                                 <Button variant="outline-primary" className='dashboard-score'>Score : {user.score}</Button>
-                               
+                                <Button variant="outline-danger" onClick={e => dispatch(logout({user_id:auth.user?auth.user._id:null}))}>Logout</Button>
                             </div>
                             <div>
                                 <h3 className='h3'>Name : {user.full_name}</h3>

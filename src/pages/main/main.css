@@ -14,11 +14,21 @@
     background-color:white;
     min-height: 100vh;
 }
+.card-banner{
+    margin-top: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    width: 100vw;
+    min-height: 10rem;
+    transition: transform .5s; /* Animation */
+    margin-right: 1rem;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */  
+}
 .declaration{
     font-size: 22px;
     font-weight: 700;
     display: flex;
-    margin: 8rem 2rem 3rem;
+    margin: 2rem 2rem 2rem;
     color:black;
     flex-direction: column;
    
@@ -27,7 +37,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin:-10px 2rem;
+    margin: 1rem;
 }
 .card-pillars{
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -51,6 +61,16 @@
     font-weight:bold;
 
 }
+.card-ongoing{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    width: 25vw;
+    min-height: 20rem;
+    transition: transform .5s; /* Animation */
+    margin-right: 1rem;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */  
+}
+
 @media only screen and (max-width:1200px) {
     .carousel{
         margin-top: 4rem;
@@ -73,5 +93,16 @@
         box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
         transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     }
+    
+.card-ongoing{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    width: 95vw;
+   
+    min-height: 20rem;
+    transition: transform .5s; /* Animation */
+    margin-right: 1rem;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */  
+}
 
 }

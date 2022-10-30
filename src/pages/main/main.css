@@ -9,13 +9,47 @@
     height:600px;
     width: 100%;
 }
-.counter{
+
+.content{
+    background-color:white;
+    min-height: 100vh;
+}
+.declaration{
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 700;
     display: flex;
-    justify-content:space-between ;
-    margin: 1rem 1rem 0 2rem;
+    margin: 8rem 2rem 3rem;
+    color:black;
+    flex-direction: column;
+   
+}
+.pillars{
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    margin:-10px 2rem;
+}
+.card-pillars{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    width: 25vw;
+    min-height: 20rem;
+    transition: transform .5s; /* Animation */
+    margin-right: 1rem;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+.card-pillars:hover{
+    box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    cursor: pointer;
+    text-decoration: underline;
+}
+.card-title{
+    color:black;
+    font-size:22px;
+    margin:auto;
+    font-weight:bold;
+
 }
 @media only screen and (max-width:1200px) {
     .carousel{
@@ -27,13 +61,17 @@
         height:300px;
         width: 100%;
     }
-    .counter{
-        font-size: 18px;
-        font-weight: 400;
-        display: flex;
-        flex-direction: column;
-        align-content:space-between ;
-        margin: 1rem 1rem 0 2rem;
-       
+ 
+    .card-pillars{
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        width: 95vw;
+        min-height: 20rem;
+        transition: transform .5s; /* Animation */
+        margin-bottom: 1rem;
     }
+    .card-pillars:hover{
+        box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
+        transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
 }

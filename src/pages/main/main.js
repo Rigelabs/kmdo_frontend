@@ -1,15 +1,15 @@
 import React from 'react'
 import NavBar from '../../components/navbar/navbar'
-import Corousel from './corousel'
-import Counter from './counter'
+import Content from './content'
 
+import "./main.css"
 export default function Main() {
   return (
     <div>
    
     <NavBar/>
-    <Corousel/>
-    <Counter/>
+    <Content/>
+    
    
     </div>
   )

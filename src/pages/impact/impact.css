@@ -1,0 +1,97 @@
+.impact_content{
+    min-height: 100vh;
+    margin-top: 4.9rem;
+   
+}
+.reach{
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    margin: 1rem;
+}
+
+.reach-card{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    font-size: 24px;
+    min-width:30vw;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.reach-title{
+    text-align: center;
+    font-size: 28;
+    color:"teal"
+}
+.counter-div{
+    color: rgb(9, 24, 8);
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    margin:0px 1rem 0px 1rem;
+}
+.counter-div:hover{
+    color: rgb(31, 203, 19);
+    font-weight: 700;
+    
+}
+.testmonial{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content:space-between ;
+   
+   
+}
+.testmonial-card{
+    margin: 1rem;
+    min-width: 50vw;
+    display: flex;
+    flex-direction: row;
+}
+.avatar{
+    border-radius: 50%;
+    width: 15vw;
+    
+}
+.tesmonial-content{
+    margin: 0px 1rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    color: rgb(128, 145, 243);
+}
+@media only screen and (max-width:1200px) {
+    .counter{
+        font-size: 18px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        align-content:space-between ;
+        margin: 1rem 1rem 0 2rem;
+       
+    }
+    
+.testmonial-card{
+    margin: 1rem;
+    min-width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+.avatar{
+    border-radius: 50%;
+    width: 15vw;
+    margin: auto;
+}
+.reach-card{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    font-size: 24px;
+    min-width:90vw;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+}

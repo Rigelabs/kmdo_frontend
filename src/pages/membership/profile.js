@@ -61,14 +61,14 @@ export default function Profile() {
                             <div className='dashboard-avatar'>
                                 <Image src={user.avatar} height={"100px"} width={"100px"} alt={user.full_name} />
                             </div>
-                            <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", margin: "1rem" }}>
+                            <div className='profile_buttons'>
 
 
                                 <Button variant="outline-success" onClick={e => setupdate_modal(!update_modal)}>Update Account</Button>
                                 <Button variant="outline-danger" onClick={e => dispatch(logout({user_id:auth.user?auth.user._id:null}))}>Logout</Button>
-                                <div className='dashboard-score'>
-                                    {user.score}
-                                </div>
+                              
+                                <Button variant="outline-primary" className='dashboard-score'>Score : {user.score}</Button>
+                               
                             </div>
                             <div>
                                 <h3 className='h3'>Name : {user.full_name}</h3>

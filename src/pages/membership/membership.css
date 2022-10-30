@@ -170,7 +170,13 @@
     flex-wrap: wrap;
     margin-top: 1rem;
 }
-
+.profile_buttons{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 1rem;
+   flex-wrap: wrap;
+}
 @media only screen and (max-width:1200px) {
     .landing {
         display: flex;
@@ -261,4 +267,8 @@
         width: 90vw;
         margin-right: 1rem;
     }
+    .dashboard-score{
+        margin-top: 1rem;
+    }
+    
 }

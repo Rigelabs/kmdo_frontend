@@ -12,7 +12,7 @@ export const loadVillages = () => async (dispatch) => {
         headers: {
             'Content-Type': 'application/json'
         },
-      
+        timeout:5000
     }
     await axios.get(`https://kmdo-backend.onrender.com/village/all`,config)
         .then(res => dispatch({
@@ -48,7 +48,7 @@ export const loadAreas = () => async (dispatch) => {
         headers: {
             'Content-Type': 'application/json'
         },
-      
+        timeout:5000
     }
     await axios.get(`https://kmdo-backend.onrender.com/village/areas/all`,config)
         .then(res => dispatch({

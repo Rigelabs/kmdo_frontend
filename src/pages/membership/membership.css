@@ -44,17 +44,19 @@
     min-height: 100%;
     background-color: whitesmoke;
     box-shadow: rgba(57, 57, 232, 0.25) 0px 30px 60px -30px inset, rgba(104, 196, 226, 0.3) 0px 18px 36px -30px inset;
-   
+
 }
-.update-modal-title{
-    display:flex;
-    justify-content:space-between;
-    color:teal;
-    font-weight:700;
-    margin-bottom:1rem;
-    width:100%;
+
+.update-modal-title {
+    display: flex;
+    justify-content: space-between;
+    color: teal;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    width: 100%;
     font-size: 20px;
 }
+
 .member-button {
     bottom: 5rem;
     right: 55vw;
@@ -124,14 +126,49 @@
     margin-right: 10px;
     flex-wrap: wrap;
 }
-.reset-card{
-   
+
+.reset-card {
+
     margin: auto;
     margin-top: 2.5rem;
     width: 40vw;
     min-height: 50vh;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.search-input {
+    width: 90vw;
+    margin: 2rem;
+}
+
+.card-board {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    width: 20vw;
+    min-height: 18rem;
+    transition: transform .5s;
+    /* Animation */
+    margin: 1rem;
+    animation: fadeInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
+}
+
+.card-board:hover {
+
+    transform: scale(1.1);
+    /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+
+.member-rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 @media only screen and (max-width:1200px) {
@@ -176,7 +213,7 @@
     }
 
     .sign-card {
-       
+
         margin: auto;
         margin-top: 5rem;
         width: 90vw;
@@ -187,22 +224,41 @@
     .logo-form {
         margin: 10px 30vw 10px 30vw;
     }
-    
-.reset-card{
-   
-    margin: auto;
-    margin-top: 2.5rem;
-    width: 90vw;
-    min-height: 50vh;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
-}
-.form-rows {
-    display: flex;
-    flex-direction: column;
 
-    margin-right: 10px;
-    width: 90vw;
-    flex-wrap: wrap;
-}
+    .reset-card {
+
+        margin: auto;
+        margin-top: 2.5rem;
+        width: 90vw;
+        min-height: 50vh;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .form-rows {
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 10px;
+        width: 90vw;
+        flex-wrap: wrap;
+    }
+
+    .card-board {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        width: 80vw;
+        min-height: 18rem;
+        transition: transform .5s;
+        /* Animation */
+        margin: 1rem;
+        animation: fadeInUp;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
+        box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
+    }
+    .search-input {
+        width: 90vw;
+        margin-left: 1rem;
+    }
 }

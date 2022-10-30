@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Alert, Button, Card, Form, Image, InputGroup, Modal, Table } from 'react-bootstrap';
+import { Alert, Button, Card, Form, Image, Modal, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { loadUser, userRegister } from '../../actions/authActions';
+import { loadUser, logout, userUpdate } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
+import { clearSuccess } from '../../actions/successActions';
 import { loadAreas, loadVillages } from '../../actions/villages';
 import "./membership.css";
 
@@ -19,17 +20,17 @@ export default function Profile() {
     const user = auth.user;
 
     const [update_modal, setupdate_modal] = useState(false);
-    const [fullname, setfullname] = useState(user ? user.full_name : null);
-    const [identification_number, setidentification_number] = useState(user ? user.identification_number : null);
-    const [contact, setcontact] = useState(user ? user.contact : null);
-    const [email, setemail] = useState(user ? user.email : null);
-    const [village, setvillage] = useState(user ? user.village : null);
-    const [area, setarea] = useState(user ? user.area : null);
-    const [occupation, setoccupation] = useState(user ? user.occupation : null);
+    const [fullname, setfullname] = useState(null);
+    const [identification_number, setidentification_number] = useState(null);
+   
+    const [email, setemail] = useState(null);
+    const [village, setvillage] = useState( null);
+    const [area, setarea] = useState(null);
+    const [occupation, setoccupation] = useState(null);
     const [avatar, setavatar] = useState(null)
 
     useEffect(() => {
-        dispatch(clearErrors())
+        
         dispatch(loadUser(auth.token));
         dispatch(loadVillages());
         dispatch(loadAreas());
@@ -39,14 +40,15 @@ export default function Profile() {
     }, [auth.isAuthenticated, errors.status]);
 
     const data = {
-        full_name: fullname, identification_number: identification_number, contact: `+254${contact}`,
-        email: email, village: village, area: area, occupation: occupation,avatar:avatar
+        full_name: fullname, identification_number: identification_number, contact: auth.user? auth.user.contact:null,
+        email: email, village: village, area: area, occupation: occupation,avatar:avatar,authToken:auth.token
 
     }
     const onSubmit = (e) => {
         e.preventDefault();
         dispatch(clearErrors());
-        dispatch(userRegister(data))
+        dispatch(clearSuccess());
+        dispatch(userUpdate(data))
     }
   
     return (
@@ -63,6 +65,7 @@ export default function Profile() {
 
 
                                 <Button variant="outline-success" onClick={e => setupdate_modal(!update_modal)}>Update Account</Button>
+                                <Button variant="outline-danger" onClick={e => dispatch(logout({user_id:auth.user?auth.user._id:null}))}>Logout</Button>
                                 <div className='dashboard-score'>
                                     {user.score}
                                 </div>
@@ -146,13 +149,7 @@ export default function Profile() {
                                             </Form.Group>
                                         </div>
                                         <div >
-                                            <Form.Group className="mb-3">
-                                                <Form.Label className='form-label'>Phone Number</Form.Label>
-                                                <InputGroup>
-                                                    <InputGroup.Text id="basic-addon1">+254</InputGroup.Text>
-                                                    <Form.Control type="text" placeholder="700000000" onChange={e => { setcontact(e.currentTarget.value) }} defaultValue={contact}/>
-                                                </InputGroup>
-                                            </Form.Group>
+                                           
 
                                             <Form.Group className="mb-3" >
                                                 <Form.Label className='form-label'>Email</Form.Label>

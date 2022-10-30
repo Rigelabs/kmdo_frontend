@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, Button, Card, Form, InputGroup } from 'react-bootstrap';
+import { BsEyeSlash } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { userLogin } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
+import { clearSuccess } from '../../actions/successActions';
 
 export default function Signin() {
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ export default function Signin() {
 
   const [contact, setcontact] = useState(null);
   const [password, setpassword] = useState(null);
-
+  const [password_visible, setpassword_visible] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +25,8 @@ export default function Signin() {
     dispatch(userLogin({ contact: `+254${contact}`, password: password }))
   }
   useEffect(() => {
+    dispatch(clearErrors());
+    dispatch(clearSuccess());
     if(auth.token&&auth.isAuthenticated&&auth.user){
       navigate("/dashboard")
     }
@@ -52,12 +56,17 @@ export default function Signin() {
               <InputGroup>
                 <InputGroup.Text id="basic-addon1">+254</InputGroup.Text>
                 <Form.Control type="text" placeholder="700000000" onChange={e => { setcontact(e.currentTarget.value) }} />
+                
                 </InputGroup>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" onChange={e => { setpassword(e.currentTarget.value) }} />
+              <InputGroup>
+             
+              <Form.Control type={password_visible?"text":"password"} placeholder="Password" onChange={e => { setpassword(e.currentTarget.value) }} />
+              <InputGroup.Text id="basic-addon1" onClick={e=>setpassword_visible(!password_visible)}>{<BsEyeSlash/>}</InputGroup.Text>
+              </InputGroup>
             </Form.Group>
 
             <Button variant="primary" type="submit" disabled={contact && password ? false : true}>

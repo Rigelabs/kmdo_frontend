@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { setDashTab } from '../../actions/utilitiesActions';
 import NavBar from '../../components/navbar/navbar';
 import "./dashboard.css";
+import Members from './members';
 import Profile from './profile';
 
 export default function Dashboard() {
@@ -38,6 +39,8 @@ export default function Dashboard() {
                 {
                     current_tab==="account" ?
                     <Profile/>:
+                    current_tab==="members" ?
+                    <Members/>:
                     null
                 }
             </div>

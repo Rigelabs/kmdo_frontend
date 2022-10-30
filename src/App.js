@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import ContactUs from "./pages/contact_us/contact_us";
+import Donate from "./pages/donate/main";
 import NotFound from "./pages/errors/404";
 import Impact from "./pages/impact/main";
 import Main from "./pages/main/main";
@@ -24,6 +25,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/about_us' element={<AboutUs />} />
         <Route path='/impact' element={<Impact />} />
+        <Route path='/donate' element={<Donate />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

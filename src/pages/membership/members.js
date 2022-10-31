@@ -14,13 +14,13 @@ export default function Members() {
       dispatch(loadUsers({authToken:auth?auth.token:null}));
     }, [auth.token])
     const onSearch=(e)=>{
-       
+        e.preventDefault()
         dispatch(searchUsers({authToken:auth?auth.token:null,keyword:keyword}))
     }
   return (
     <div>
         <div className='search-input'>
-            <Form >
+            <Form onSubmit={onSearch}>
             <InputGroup>
                
             <Form.Control size="lg" type="text" placeholder="Search members by Names or Area or Occupation" onChange={e=>setkeyword(e.currentTarget.value)} />

@@ -19,8 +19,10 @@ export default function Content() {
                     <ButtonGroup >
                        
                         <Button  onClick={e=>{onadmin_tab("members");setcurrent_tab("members")}}>Members</Button>
+                        <Button  onClick={e=>{onadmin_tab("comittee");setcurrent_tab("comittee")}}>Comittee</Button>
+                        <Button  onClick={e=>{onadmin_tab("villages");setcurrent_tab("villages")}}>Villages</Button>
+                        <Button  onClick={e=>{onadmin_tab("programs");setcurrent_tab("programs")}}>Programs</Button>
                         <Button  onClick={e=>{onadmin_tab("events");setcurrent_tab("events")}}>Events</Button>
-                     
                     </ButtonGroup>
                 </ButtonToolbar>
             </div>

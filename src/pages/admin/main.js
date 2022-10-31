@@ -7,20 +7,20 @@ import Content from './content';
 
 export default function Admin() {
     const navigate=useNavigate();
-    const user=useSelector(state=>state.auth.user);
-    
+    const auth=useSelector(state=>state.auth);
+    const user=auth.user;
     useEffect(() => {
-        if (!user) {
+        if (!auth.isLoading&&auth.token===null) {
             navigate("/membership");
         }
-    }, [user])
+    }, [])
     
   return (
     <div>
          <NavBar/>
-         {user?user.rank==="MEMBER" ?
-         <Unathorized/>  :
-         <Content/>
+         {user?user.rank!=="MEMBER" ?
+          <Content/>:
+         <Unathorized/> 
          :null
          }
     </div>

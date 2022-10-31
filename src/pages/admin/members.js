@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, Button, Form, InputGroup, Modal, Table } from 'react-bootstrap';
-import { BsFillEyeFill, BsGear, BsSearch } from "react-icons/bs";
+import { BsFillEyeFill, BsGear } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
 import { adminMemberUpdate, loadUser, loadUsers, searchUsers } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
@@ -38,7 +38,7 @@ export default function Members() {
           <InputGroup>
 
             <Form.Control size="lg" type="text" placeholder="Search members by Names or Area or Occupation" onChange={e => setkeyword(e.currentTarget.value)} />
-            <InputGroup.Text id="basic-addon1" onClick={e => onSearch()}>{<BsSearch color='blue' />}</InputGroup.Text>
+            
           </InputGroup>
         </Form>
       </div>

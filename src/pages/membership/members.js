@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Form, InputGroup } from 'react-bootstrap';
-import { BsSearch } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
 import { loadUsers, searchUsers } from '../../actions/authActions';
 
@@ -24,7 +23,7 @@ export default function Members() {
             <InputGroup>
                
             <Form.Control size="lg" type="text" placeholder="Search members by Names or Area or Occupation" onChange={e=>setkeyword(e.currentTarget.value)} />
-            <InputGroup.Text id="basic-addon1" onClick={e=>onSearch()}>{<BsSearch color='blue'/>}</InputGroup.Text>
+          
             </InputGroup>
             </Form>
         </div>

@@ -24,7 +24,7 @@ export const userRegister = ({ contact, full_name, village, area, occupation,
             email: email, village: village, area: area, occupation: occupation,
             registration_number: registration_number
         }
-        await axios.post(`${remote_host}/auth/user/create`, data, config)
+        await axios.post(`${remote_host}auth/user/create`, data, config)
 
             .then(res => {
                 dispatch({ type: actions.REGISTER_SUCCESS, payload: res.data })
@@ -123,7 +123,7 @@ export const change_password = ({ contact, password, otp_code }) => async (dispa
     const data = {
         contact: contact, password: password, otp_code: otp_code
     }
-    await axios.post(`${remote_host}/auth/user/change_password`, data, config)
+    await axios.post(`${remote_host}auth/user/change_password`, data, config)
 
         .then(res => {
             dispatch({ type: actions.CHANGE_PASSWORD_SUCCESS, payload: res.data })
@@ -258,7 +258,7 @@ export const userUpdate = ({ contact, full_name, village, area, occupation, auth
                 'Content-Type': 'multipart/form-data',
                 'Authorization': "Bearer " + authToken
             },
-            timeout: 10000
+           
         }
         const data = new FormData();
         if (full_name) {

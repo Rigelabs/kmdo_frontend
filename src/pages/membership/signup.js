@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { userRegister } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
+import { clearSuccess } from '../../actions/successActions';
 import { loadAreas, loadVillages } from '../../actions/villages';
 
 export default function SignUp() {
@@ -26,6 +27,8 @@ export default function SignUp() {
   
 
     useEffect(() => {
+        dispatch(clearSuccess());
+        dispatch(clearErrors());
         dispatch(loadAreas());
         dispatch(loadVillages());
     }, [errors.status])

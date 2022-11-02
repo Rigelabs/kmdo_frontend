@@ -25,7 +25,14 @@
         flex-direction: column;
 
         margin: 1rem;
-        width: 90vw;
+        width: 80vw;
         flex-wrap: wrap;
+    }
+    .form-button{
+        margin:1rem 1rem 0px 0px;
+    }
+    .member-update-modal{
+        width: 98vw;
+        margin-top: 6rem;
     }
 }

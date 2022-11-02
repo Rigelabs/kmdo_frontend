@@ -29,6 +29,7 @@ export default function NavBar() {
             className="me-auto my-2 my-lg-0"
             navbarScroll
           >
+            <Nav.Link className="nav-links" href="/">Home</Nav.Link>
             <Nav.Link className="nav-links" href="/about_us">Who We Are</Nav.Link>
             <Nav.Link className="nav-links" href="/impact">Our Impact</Nav.Link>
             

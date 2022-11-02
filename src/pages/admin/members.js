@@ -78,7 +78,7 @@ export default function Members() {
           </tbody>
         </Table>
       </div>
-      <Modal show={user_update_modal}>
+      <Modal show={user_update_modal} className='member-update-modal'>
         <Modal.Header>Update Member</Modal.Header>
         {Object.keys(errors.msg).length > 0 ?
                     <Alert variant='danger'>{errors.msg.message}</Alert>
@@ -94,7 +94,7 @@ export default function Members() {
           <div className='form-rows'>
             <Form.Group className="mb-3">
               <Form.Label className='form-label'>Member Status</Form.Label>
-              <Form.Select onChange={e => { setstatus(e.currentTarget.value) }}>
+              <Form.Select onChange={e => { setstatus(e.currentTarget.value) }} >
                 <option>Change User Status</option>
                 <option>ACTIVE</option>
                 <option>PENDING</option>
@@ -105,10 +105,10 @@ export default function Members() {
             </Form.Group>
           </div>
           <div className='form-rows'>
-            <Button variant="success" type="submit" >
+            <Button variant="success" type="submit" className='form-button'>
               Update
               </Button>
-              <Button variant="danger" 
+              <Button variant="danger" className='form-button'
               onClick={e=>{setuser_update_modal(!user_update_modal);dispatch(loadUsers({authToken:auth.token}))}} >
               Cancel
               </Button>

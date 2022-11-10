@@ -160,7 +160,7 @@
         margin-top: 5rem;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
         width: 100vw;
-        height: 30vh;
+        height: 35vh;
         background-image: url("https://res.cloudinary.com/dwnxsji2z/image/upload/v1668102733/IMG_8094_1_f9obgg.jpg");
         ;
         background-size: cover;
@@ -178,9 +178,13 @@
     background: rgb(249, 249, 252);
     background: linear-gradient(90deg, rgba(249, 249, 252, 0) 3%, rgba(2, 16, 46, 0.8127626050420168) 100%);
     width: 100vw;
-    height: 30vh;
+    height: 35vh;
     display: flex;
     justify-content: flex-end;
+    animation: fadeInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s;
+    /* don't forget to set a duration! */
 }
 
 .overlay-text {

@@ -1,108 +1,199 @@
-.carousel{
-  
+.carousel {
+
     min-height: 70vh;
     width: 100vw;
 }
-.carousel-image{
-    display:block;
-    width:fit-content;
-    height:600px;
+
+.carousel-image {
+    display: block;
+    width: fit-content;
+    height: 600px;
     width: 100%;
 }
 
-.content{
-    background-color:white;
+.content {
+    background-color: white;
     min-height: 100vh;
 }
-.card-banner{
+
+.card-banner {
     margin-top: 5rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     width: 100vw;
-    min-height: 10rem;
-    transition: transform .5s; /* Animation */
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/dwnxsji2z/image/upload/v1668102733/IMG_8094_1_f9obgg.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform .5s;
+    /* Animation */
     margin-right: 1rem;
-    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */  
+    animation: fadeInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
 }
-.declaration{
+
+.declaration {
     font-size: 22px;
     font-weight: 700;
     display: flex;
     margin: 2rem 2rem 2rem;
-    color:black;
+    color: black;
     flex-direction: column;
-   
+
 }
-.pillars{
+
+.pillars {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 1rem;
 }
-.card-pillars{
+
+.card-pillars {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     width: 25vw;
     min-height: 20rem;
-    transition: transform .5s; /* Animation */
+    transition: transform .5s;
+    /* Animation */
     margin-right: 1rem;
-    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: fadeInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
 }
-.card-pillars:hover{
+
+.card-pillars:hover {
     box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
-    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.1);
+    /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     cursor: pointer;
     text-decoration: underline;
 }
-.card-title{
-    color:black;
-    font-size:22px;
-    margin:auto;
-    font-weight:bold;
+
+.card-title {
+    color: black;
+    font-size: 22px;
+    margin: auto;
+    font-weight: bold;
 
 }
-.card-ongoing{
+
+.card-ongoing {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     width: 25vw;
     min-height: 20rem;
-    transition: transform .5s; /* Animation */
+    transition: transform .5s;
+    /* Animation */
     margin-right: 1rem;
-    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */  
+    animation: fadeInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+}
+
+.overlay {
+    background: rgb(249, 249, 252);
+    background: linear-gradient(90deg, rgba(249, 249, 252, 0) 3%, rgba(2, 16, 46, 0.8127626050420168) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.overlay-text {
+    opacity: 0.9;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    left: 0;
+    font-weight: 900;
+    color: whitesmoke;
+    width: 30vw;
+    margin: 8rem 1rem 0px 0px;
+    font-size: 28px;
 }
 
 @media only screen and (max-width:1200px) {
-    .carousel{
+    .carousel {
         margin-top: 4rem;
-       
+
         width: 100vw;
     }
-    .carousel-image{
-        height:300px;
+
+    .carousel-image {
+        height: 300px;
         width: 100%;
     }
- 
-    .card-pillars{
+
+    .card-pillars {
         box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
         width: 95vw;
         min-height: 20rem;
-        transition: transform .5s; /* Animation */
+        transition: transform .5s;
+        /* Animation */
         margin-bottom: 1rem;
     }
-    .card-pillars:hover{
+
+    .card-pillars:hover {
         box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
-        transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        transform: scale(1.1);
+        /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .card-ongoing {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        width: 95vw;
+
+        min-height: 20rem;
+        transition: transform .5s;
+        /* Animation */
+        margin-right: 1rem;
+        animation: fadeInLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
+    }
+
+    .card-banner {
+        margin-top: 5rem;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        width: 100vw;
+        height: 30vh;
+        background-image: url("https://res.cloudinary.com/dwnxsji2z/image/upload/v1668102733/IMG_8094_1_f9obgg.jpg");
+        ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform .5s;
+        /* Animation */
+        margin-right: 1rem;
+        animation: fadeInLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
     }
     
-.card-ongoing{
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-    width: 95vw;
-   
-    min-height: 20rem;
-    transition: transform .5s; /* Animation */
-    margin-right: 1rem;
-    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */  
+.overlay {
+    background: rgb(249, 249, 252);
+    background: linear-gradient(90deg, rgba(249, 249, 252, 0) 3%, rgba(2, 16, 46, 0.8127626050420168) 100%);
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.overlay-text {
+    opacity: 0.9;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    left: 0;
+    font-weight: 900;
+    color: whitesmoke;
+    width: 30vw;
+    margin: 2rem 1rem 10px 0px;
+    font-size: 16px;
 }
 
 }

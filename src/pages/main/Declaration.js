@@ -8,9 +8,7 @@ export default function Declaration() {
            to improve quality of life of our community.
 
         </div>
-        <div style={{color:"darkblue",fontSize:"32px"}}>
-            How we do it
-        </div>
+       
         
     </div>
   )

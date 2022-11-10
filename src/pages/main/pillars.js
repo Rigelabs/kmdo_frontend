@@ -6,10 +6,13 @@ export default function Pillars() {
   const navigate=useNavigate();
   
   return (
-    <div className='pillars'>
-      <div style={{color:"darkblue",fontSize:"32px",fontWeight:"bolder", margin: "2rem 2rem 2rem",textDecoration:"underline"}}>
+    <>
+    
+      <div style={{color:"darkblue",fontSize:"32px",fontWeight:"bolder", margin: "2rem 0px 0px 2rem"}}>
             How we do it
         </div>
+        <hr/>
+        <div className='pillars'>
         <Card className='card-pillars' onClick={e=>navigate("/education")}>
         <Card.Img variant="top" height="200px"  className="card-image" border src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1666758419/student_girls_wziylf.jpg" />
         <div style={{margin:"auto"}}><BiHealth color="darkblue" size={40}/></div>
@@ -30,5 +33,6 @@ export default function Pillars() {
             Health Support</div>
         </Card>
     </div>
+    </>
   )
 }

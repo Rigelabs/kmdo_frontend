@@ -25,8 +25,8 @@ export default function Pillars() {
         </Card>
         <Card className='card-pillars' onClick={e=>navigate("/health")}>
         <Card.Img variant="top" height="200px"  className="card-image" border src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1666758696/washing_stand_soor1n.jpg" />
-        <div style={{margin:"auto"}}><BiDonateHeart color="red" size={40}/></div>
-        <div style={{color:"red",fontSize:"22px",margin:'auto',fontWeight:"bold"}}>
+        <div style={{margin:"auto"}}><BiDonateHeart color="green" size={40}/></div>
+        <div style={{color:"green",fontSize:"22px",margin:'auto',fontWeight:"bold"}}>
             Health Support</div>
         </Card>
     </div>

@@ -15,9 +15,10 @@ export default function CoreValues() {
             </div>
             <div>
             <li>Accountability</li>
-            <li>Dignity and Respect</li>
+            
             <li>Prosperity</li>
             <li>Transparency</li>
+            <li>Dignity and Respect</li>
             </div>
           </ul>
         </div>

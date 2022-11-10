@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import aboutusReducer from './aboutusReducer';
 import authReducer from './authReducer';
 import errorReducer from './errorReducer';
 import successReducer from './successReducer';
@@ -11,5 +12,6 @@ export default combineReducers({
   villages:villageReducer,
   errors:errorReducer,
   success:successReducer,
-  auth:authReducer
+  auth:authReducer,
+  about_us:aboutusReducer
 });

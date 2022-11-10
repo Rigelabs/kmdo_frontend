@@ -1,134 +1,196 @@
-.about_content{
+.about_content {
     min-height: 100vh;
-   
+
 }
-.story{
-    margin:6rem 0px 2rem 1rem;
+
+.story {
+    margin: 6rem 0px 2rem 1rem;
     width: 60vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
-    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-    transition: transform .5s; /* Animation */
+    animation: fadeInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    transition: transform .5s;
+    /* Animation */
 }
-.story-content{
-    margin:1rem;
+
+.story-content {
+    margin: 1rem;
     font-size: 18px;
     font-weight: 600;
 }
 
-.vission{
-    margin:1rem 2rem 2rem 0px;
+.vission {
+    margin: 1rem 2rem 2rem 0px;
     width: 60vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
-    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-    transition: transform .5s; /* Animation */
+    animation: fadeInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    transition: transform .5s;
+    /* Animation */
     float: right;
 }
-.vission-content{
-    margin:1rem;
+
+.vission-content {
+    margin: 1rem;
     font-size: 18px;
     font-weight: 600;
 }
-.core_values{
-    margin:1rem 2rem 2rem 1rem;
+
+.core_values {
+    margin: 1rem 2rem 2rem 1rem;
     width: 60vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
-    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-    transition: transform .5s; /* Animation */
+    animation: fadeInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    transition: transform .5s;
+    /* Animation */
     float: left;
 }
-.core_values_content{
-    margin:1rem;
+
+.core_values_content {
+    margin: 1rem;
     font-size: 18px;
     font-weight: 600;
 }
-.core_values_ul{
+
+.core_values_ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.team{
-    margin:28rem 2rem 2rem 1rem;
+
+.team {
+    margin: 28rem 2rem 2rem 1rem;
     font-size: 18px;
     font-weight: 600;
 }
-.reports{
-    margin:2rem 2rem 2rem 1rem;
+
+.reports {
+    margin: 2rem 2rem 2rem 1rem;
     font-size: 18px;
     font-weight: 600;
 }
-.chair{
+
+.chair {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.card-board{
+
+.card-board {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     width: 20vw;
     min-height: 18rem;
-    transition: transform .5s; /* Animation */
+    transition: transform .5s;
+    /* Animation */
     margin: 1rem;
-    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: fadeInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
     box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
 }
 
-.card-board:hover{
-   
-    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  
+.card-board:hover {
+
+    transform: scale(1.1);
+    /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
 }
-.member-rows{
+
+.member-rows {
     display: flex;
     flex-direction: row;
-    justify-content: left; 
+    justify-content: left;
     flex-wrap: wrap;
     margin-top: 1rem;
 }
+
+.reports {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem
+}
+
+.report {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem
+}
+
+.report-link {
+    text-decoration: none;
+}
+
+.report:hover {
+    color: darkblue;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
 @media only screen and (max-width:1200px) {
-    .story{
-        margin:6rem 10px 2rem 10px;
+    .story {
+        margin: 6rem 10px 2rem 10px;
         width: 95vw;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         background-color: white;
-        animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 2s; /* don't forget to set a duration! */
-        transition: transform .5s; /* Animation */
+        animation: fadeInRight;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
+        transition: transform .5s;
+        /* Animation */
     }
-    
-.vission{
-    margin:1rem 10px 1rem 10px;
-    width: 95vw;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: white;
-    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-    transition: transform .5s; /* Animation */
-    float: right;
-}
-.core_values{
-    margin:1rem 10px 1rem 10px;
-    width: 95vw;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: white;
-    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-    transition: transform .5s; /* Animation */
-    float: left;
-}
-.card-board{
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-    width: 80vw;
-    min-height: 18rem;
-    transition: transform .5s; /* Animation */
-    margin: 1rem;
-    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-    box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
-}
+
+    .vission {
+        margin: 1rem 10px 1rem 10px;
+        width: 95vw;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        animation: fadeInLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
+        transition: transform .5s;
+        /* Animation */
+        float: right;
+    }
+
+    .core_values {
+        margin: 1rem 10px 1rem 10px;
+        width: 95vw;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        animation: fadeInRight;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
+        transition: transform .5s;
+        /* Animation */
+        float: left;
+    }
+
+    .card-board {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        width: 80vw;
+        min-height: 18rem;
+        transition: transform .5s;
+        /* Animation */
+        margin: 1rem;
+        animation: fadeInUp;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
+        box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
+    }
 }

@@ -14,9 +14,7 @@ export default function Ourstory() {
             Karinga Massive Development Organization exists to enhance sustained social-ecomomic growth
             through public sensitization and resource mobilization to improve quality of life of our community
             </div>
-            <div>
-                The Organization was founded on ..........
-            </div>
+            
             </div>
     </div>
   )

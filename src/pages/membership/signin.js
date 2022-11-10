@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { userLogin } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 import { clearSuccess } from '../../actions/successActions';
+import Spinner from '../../components/spinner/spinners';
 
 export default function Signin() {
   const navigate = useNavigate();
@@ -34,8 +35,9 @@ export default function Signin() {
   
   return (
     <div className='signin'>
+       {auth.isLoading ? <Spinner/>:
       <Card className='sign-card'>
-    
+       
         {Object.keys(errors.msg).length > 0 ?
           <Alert variant='danger'>{errors.msg.message}</Alert>
 
@@ -80,6 +82,7 @@ export default function Signin() {
           </div>
         </div>
       </Card>
+}
     </div>
   )
 }

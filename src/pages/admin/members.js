@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { adminMemberUpdate, loadUser, loadUsers, searchUsers } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 import { clearSuccess } from '../../actions/successActions';
+import Spinner from '../../components/spinner/spinners';
 import "./admin.css";
 
 export default function Members() {
@@ -33,6 +34,8 @@ export default function Members() {
   }
   return (
     <div>
+       {auth.isLoading ? <Spinner/>:
+       <>
       <div className='search-input'>
         <Form onSubmit={onSearch}>
           <InputGroup>
@@ -78,6 +81,7 @@ export default function Members() {
           </tbody>
         </Table>
       </div>
+     
       <Modal show={user_update_modal} className='member-update-modal'>
         <Modal.Header>Update Member</Modal.Header>
         {Object.keys(errors.msg).length > 0 ?
@@ -115,6 +119,8 @@ export default function Members() {
           </div>
         </Form>
       </Modal>
+      </>
+    }
     </div>
   )
 }

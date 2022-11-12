@@ -9,6 +9,9 @@ import Auth from "./pages/membership/auth";
 import Dashboard from "./pages/membership/dashboard";
 import Landing from "./pages/membership/landing";
 import Reset from "./pages/membership/reset";
+import Education from "./pages/pillars/education";
+import Health from "./pages/pillars/health";
+import SocialEconomic from "./pages/pillars/social_economic";
 import AboutUs from "./pages/who_we_are/main";
 
 function App() {
@@ -28,6 +31,9 @@ function App() {
         <Route path='/impact' element={<Impact />} />
         <Route path='/donate' element={<Donate />} />
         <Route path='/admin' element={<Admin />} />
+        <Route path='/education' element={<Education />} />
+        <Route path='/social_economic' element={<SocialEconomic />} />
+        <Route path='/health' element={<Health />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

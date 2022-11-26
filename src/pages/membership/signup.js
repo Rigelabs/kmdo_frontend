@@ -47,8 +47,6 @@ export default function SignUp() {
         village_areas=areas.filter(area=>area.village===village);
     }
     
-    
-    console.log(village_areas);
     return (
         <div className='signup'>
 

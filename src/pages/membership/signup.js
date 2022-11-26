@@ -31,7 +31,7 @@ export default function SignUp() {
         dispatch(clearErrors());
         dispatch(loadAreas());
         dispatch(loadVillages());
-    }, [errors.status])
+    }, []);
     const data = {
         full_name: fullname, identification_number: identification_number, contact: `+254${contact}`,
         email: email, village: village, area: area, occupation: occupation,

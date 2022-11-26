@@ -1,12 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import NavBar from '../../components/navbar/navbar';
 import "./membership.css";
 import SignUp from './signup';
 
 export default function Landing() {
-    const navigate= useNavigate();
-    
+   
     return (
         <>
             <NavBar />

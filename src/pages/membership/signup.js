@@ -42,6 +42,13 @@ export default function SignUp() {
         dispatch(clearErrors());
         dispatch(userRegister(data))
     }
+    var village_areas;
+    if(areas){
+        village_areas=areas.filter(area=>area.village===village);
+    }
+    
+    
+    console.log(village_areas);
     return (
         <div className='signup'>
 
@@ -65,13 +72,13 @@ export default function SignUp() {
                         <div className='form-rows'>
                             <Form.Group className="mb-3">
                                 <Form.Label className='form-label'>Full Name</Form.Label>
-                                <Form.Control type="text" placeholder="Enter Full Name" onChange={e => { setfullname(e.currentTarget.value) }} />
+                                <Form.Control type="text" placeholder="Enter Full Name" onChange={e => { setfullname(e.currentTarget.value) }} className="signup_input" />
 
                             </Form.Group>
 
                             <Form.Group className="mb-3" >
                                 <Form.Label className='form-label'>ID / Passport Number</Form.Label>
-                                <Form.Control type="text" placeholder="Enter ID Number / Passport Number" onChange={e => { setidentification_number(e.currentTarget.value) }} />
+                                <Form.Control type="text" placeholder="Enter ID Number / Passport Number" onChange={e => { setidentification_number(e.currentTarget.value) }} className="signup_input" />
 
                             </Form.Group>
                         </div>
@@ -80,20 +87,20 @@ export default function SignUp() {
                                 <Form.Label className='form-label'>Phone Number</Form.Label>
                                 <InputGroup>
                                     <InputGroup.Text id="basic-addon1">+254</InputGroup.Text>
-                                    <Form.Control type="text" placeholder="700000000" onChange={e => { setcontact(e.currentTarget.value) }} />
+                                    <Form.Control type="text" placeholder="700000000" onChange={e => { setcontact(e.currentTarget.value) }} className="signup_input"/>
                                 </InputGroup>
                             </Form.Group>
 
                             <Form.Group className="mb-3" >
                                 <Form.Label className='form-label'>Email</Form.Label>
-                                <Form.Control type="text" placeholder="Enter email" onChange={e => { setemail(e.currentTarget.value) }} />
+                                <Form.Control type="text" placeholder="Enter email" onChange={e => { setemail(e.currentTarget.value) }} className="signup_input"/>
 
                             </Form.Group>
                         </div>
                         <div className='form-rows'>
                             <Form.Group className="mb-3">
                                 <Form.Label className='form-label'>Village</Form.Label>
-                                <Form.Select onChange={e => { setvillage(e.currentTarget.value) }}>
+                                <Form.Select onChange={e => { setvillage(e.currentTarget.value) }} className="signup_input">
                                     <option>Select your Village</option>
                                     {villages.villages ? villages.villages.map((village, key) => (
                                         <option key={key} value={village.name}>{village.name}</option>
@@ -104,9 +111,9 @@ export default function SignUp() {
 
                             <Form.Group className="mb-3">
                                 <Form.Label className='form-label'>Area</Form.Label>
-                                <Form.Select onChange={e => { setarea(e.currentTarget.value) }}>
+                                <Form.Select onChange={e => { setarea(e.currentTarget.value) }} className="signup_input">
                                     <option>Select your Area</option>
-                                    {areas ? areas.map((area, key) => (
+                                    {village_areas ? village_areas.map((area, key) => (
                                         <option key={key} value={area.name}>{area.name}</option>
                                     )) : <option>Select your Area</option>}
                                 </Form.Select>
@@ -114,14 +121,14 @@ export default function SignUp() {
                             </Form.Group>
                         </div>
                         <div className='form-rows'>
-                            <Form.Group className="mb-3">
+                            <Form.Group className="mb-3" >
                                 <Form.Label className='form-label'>Occupation</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your occupation" onChange={e => { setoccupation(e.currentTarget.value) }} />
+                                <Form.Control type="text" placeholder="Enter your occupation" onChange={e => { setoccupation(e.currentTarget.value) }} className="signup_input"/>
 
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label className='form-label'>Registration Number</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your reg no." onChange={e => { setregistration_number(e.currentTarget.value) }} />
+                                <Form.Control type="text" placeholder="Enter your reg no." onChange={e => { setregistration_number(e.currentTarget.value) }} className="signup_input"/>
 
                             </Form.Group>
                         </div>
@@ -134,7 +141,7 @@ export default function SignUp() {
 
                     </Form>
                     <div style={{ marginTop: "1rem", display: 'flex', flexDirection: 'row', justifyContent: "space-between" }}>
-                        <div className='form-link' onClick={e => navigate("/membership")}>Sign In ?</div>
+                        <div className='form-link' onClick={e => navigate("/membership")}>Already have an account ? Sign In </div>
 
                     </div>
                 </div>

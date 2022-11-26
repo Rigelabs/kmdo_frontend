@@ -146,11 +146,12 @@ export const change_password = ({ contact, password, otp_code }) => async (dispa
 
 //check token and load user
 export const loadUser = (authToken) => async (dispatch) => {
-    //User Loading
-    dispatch({ type: actions.LOADING_USER });
+    
 
     try {
         if (authToken) {
+            //User Loading
+    dispatch({ type: actions.LOADING_USER });
             const config = {
                 headers: {
                     'Content-Type': 'application/json',
@@ -171,6 +172,8 @@ export const loadUser = (authToken) => async (dispatch) => {
                     dispatch({ type: actions.USER_LOADING_ERROR })
 
                 })
+        }else{
+            dispatch({ type: actions.USER_LOADING_ERROR })
         }
     } catch (error) {
         dispatch({ type: actions.USER_LOADING_ERROR })

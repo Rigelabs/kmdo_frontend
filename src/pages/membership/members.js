@@ -32,7 +32,7 @@ export default function Members() {
             {members ? members.map((member,key)=>(
 
           <Card className='card-board'>
-            <Card.Img variant="top" height="200px" className="card-image" border src={member.avatar} />
+            <Card.Img variant="top" height="250px" className="card-image" border src={member.avatar} />
             <div style={{ color: "black", fontSize: "22px", margin: 'auto', fontWeight: "bold" }}>
               {member.full_name}</div>
             <div style={{ color: "black", fontSize: "22px", margin: 'auto', fontWeight: "bold" }}>

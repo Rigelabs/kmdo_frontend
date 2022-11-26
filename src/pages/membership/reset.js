@@ -29,7 +29,7 @@ export default function Reset() {
     const onChangePassword = (e) => {
         e.preventDefault();
         dispatch(clearErrors());
-        dispatch(change_password({ contact: `+254${contact}`, password: password, otp_code: otp_code }));
+        dispatch(change_password({ contact: `+254${contact}`, password: password,})); //otp_code: otp_code }));
     }
     useEffect(() => {
         if (auth.token && auth.isAuthenticated && auth.user) {
@@ -57,7 +57,9 @@ export default function Reset() {
                     <div className='logo-form'>
                         <img width="100px" height="100px" src='https://res.cloudinary.com/dwnxsji2z/image/upload/v1665880877/logo/icon-transparent_qdcqo9.ico' alt="" />
                     </div>
+                    
                     <div style={{ margin: "10px" }}>
+                        {/*
                         <Form onSubmit={onRequestCode}>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -75,8 +77,15 @@ export default function Reset() {
                         </Form>
 
                         <hr />
-
+                        */}
                         <Form onSubmit={onChangePassword}>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label className='form-label'>Phone Number</Form.Label>
+                                <InputGroup>
+                                    <InputGroup.Text id="basic-addon1">+254</InputGroup.Text>
+                                    <Form.Control type="text" placeholder="700000000" onChange={e => { setcontact(e.currentTarget.value) }} />
+                                </InputGroup>
+                            </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>New Password</Form.Label>
                                 <InputGroup>
@@ -92,11 +101,13 @@ export default function Reset() {
                                 </InputGroup>
 
                             </Form.Group>
+                            {/*
                             <Form.Group className="mb-3">
                                 <Form.Label>OTP Code</Form.Label>
                                 <Form.Control placeholder="Enter OTP Code" onChange={e => { setotp_code(e.currentTarget.value) }} />
                             </Form.Group>
-                            <Button variant="primary" type="submit" disabled={password === confirm_password && otp_code && contact ? false : true}>
+                    */}
+                            <Button variant="primary" type="submit" disabled={password === confirm_password  && contact ? false : true}>
                                 Reset Password
                             </Button>
 

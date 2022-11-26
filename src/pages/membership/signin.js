@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { userLogin } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 import { clearSuccess } from '../../actions/successActions';
-import Spinner from '../../components/spinner/spinners';
 
 export default function Signin() {
   const navigate = useNavigate();
@@ -35,7 +34,7 @@ export default function Signin() {
   
   return (
     <div className='signin'>
-       {auth.isLoading ? <Spinner/>:
+      
       <Card className='sign-card'>
        
         {Object.keys(errors.msg).length > 0 ?
@@ -71,7 +70,7 @@ export default function Signin() {
               </InputGroup>
             </Form.Group>
 
-            <Button variant="primary" type="submit" disabled={contact && password ? false : true}>
+            <Button variant="primary" type="submit" disabled={contact && password && !auth.isLoading? false : true}>
              {auth.isLoading ? "Logging In ........": "Sign In"}
             </Button>
 
@@ -82,7 +81,7 @@ export default function Signin() {
           </div>
         </div>
       </Card>
-}
+
     </div>
   )
 }

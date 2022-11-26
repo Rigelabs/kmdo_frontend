@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import AddBoardMember from "./pages/admin/add_board_member";
 import Admin from "./pages/admin/main";
 import ContactUs from "./pages/contact_us/contact_us";
 import Donate from "./pages/donate/main";
@@ -34,6 +35,7 @@ function App() {
         <Route path='/education' element={<Education />} />
         <Route path='/social_economic' element={<SocialEconomic />} />
         <Route path='/health' element={<Health />} />
+        <Route path='/add_board_member' element={<AddBoardMember />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

@@ -3,7 +3,9 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setAdminTab } from '../../actions/utilitiesActions';
+import Committee from './committee';
 import Members from './members';
+import Villages from './villages';
 
 export default function Content() {
     const navigate = useNavigate();
@@ -32,6 +34,10 @@ export default function Content() {
                 {
                     current_tab === "members" ?
                         <Members /> :
+                        current_tab === "comittee" ?
+                        <Committee /> :
+                        current_tab === "villages" ?
+                        <Villages /> :
                         null
                 }
             </div>

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import aboutusReducer from './aboutusReducer';
 import authReducer from './authReducer';
+import boardReducer from './boardReducer';
 import errorReducer from './errorReducer';
 import successReducer from './successReducer';
 import utilitiesReducer from './utilitiesReducer';
@@ -13,5 +14,6 @@ export default combineReducers({
   errors:errorReducer,
   success:successReducer,
   auth:authReducer,
-  about_us:aboutusReducer
+  about_us:aboutusReducer,
+  board:boardReducer
 });

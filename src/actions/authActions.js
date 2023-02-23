@@ -267,9 +267,7 @@ export const userUpdate = ({ contact, full_name, village, area, occupation, auth
         if (full_name) {
             data.append("full_name", full_name)
         }
-        if (identification_number) {
-            data.append("identification_number", identification_number)
-        }
+        
         if (contact) {
             data.append("contact", contact)
         }

@@ -40,7 +40,7 @@ export default function Profile() {
     }, [auth.isAuthenticated, errors.status]);
 
     const data = {
-        full_name: fullname, identification_number: identification_number, contact: auth.user? auth.user.contact:null,
+        full_name: fullname, contact: auth.user? auth.user.contact:null,
         email: email, village: village, area: area, occupation: occupation,avatar:avatar,authToken:auth.token
 
     }
@@ -141,11 +141,7 @@ export default function Profile() {
 
                                             </Form.Group>
 
-                                            <Form.Group className="mb-3" >
-                                                <Form.Label className='form-label'>ID / Passport Number</Form.Label>
-                                                <Form.Control type="text" placeholder="Enter ID Number / Passport Number" onChange={e => { setidentification_number(e.currentTarget.value) }} defaultValue={identification_number} />
-
-                                            </Form.Group>
+                                            
                                         </div>
                                         <div >
                                            

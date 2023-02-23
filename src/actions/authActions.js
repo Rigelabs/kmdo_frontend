@@ -251,7 +251,7 @@ export const searchUsers = ({ authToken, keyword }) => async (dispatch) => {
 
 };
 export const userUpdate = ({ contact, full_name, village, area, occupation, authToken,
-    email, identification_number, registration_number, avatar, status }) => async (dispatch) => {
+    email,  registration_number, avatar, status }) => async (dispatch) => {
 
         dispatch({ type: actions.UPDATING_USER });
 

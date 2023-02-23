@@ -1,12 +1,17 @@
+import {
+    GoogleAuthProvider, signInWithPopup
+} from "firebase/auth";
 import React, { useEffect, useState } from 'react';
-import { Alert, Button, Card, Form, InputGroup } from 'react-bootstrap';
+import { Alert, Button, Card, Form, InputGroup, Modal } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { userRegister } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 import { clearSuccess } from '../../actions/successActions';
 import { loadAreas, loadVillages } from '../../actions/villages';
+import firebase_auth from "../../firebase";
 
+const googleProvider = new GoogleAuthProvider();
 export default function SignUp() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -17,23 +22,26 @@ export default function SignUp() {
     const areas = villages.areas;
 
     const [fullname, setfullname] = useState(null);
-    const [identification_number, setidentification_number] = useState(null);
     const [contact, setcontact] = useState(null);
     const [email, setemail] = useState(null);
     const [village, setvillage] = useState(null);
     const [area, setarea] = useState(null);
     const [occupation, setoccupation] = useState(null);
     const [registration_number, setregistration_number] = useState(null);
-  
+    const [modalShow, setmodalShow] = useState(true);
+    const signInWithGoogle = async () => {
+        try {
+            const res = await signInWithPopup(firebase_auth(), googleProvider);
+            const user = res.user;
+            setemail(user.email)
+            setmodalShow(false)
+        } catch (err) {
 
-    useEffect(() => {
-        dispatch(clearSuccess());
-        dispatch(clearErrors());
-        dispatch(loadAreas());
-        dispatch(loadVillages());
-    }, []);
+            alert("Sign in error, try again");
+        }
+    };
     const data = {
-        full_name: fullname, identification_number: identification_number, contact: `+254${contact}`,
+        full_name: fullname, contact: `+254${parseInt(contact)}`,
         email: email, village: village, area: area, occupation: occupation,
         registration_number: registration_number
     }
@@ -43,10 +51,16 @@ export default function SignUp() {
         dispatch(userRegister(data))
     }
     var village_areas;
-    if(areas){
-        village_areas=areas.filter(area=>area.village===village);
+    if (areas) {
+        village_areas = areas.filter(area => area.village === village);
     }
-    
+
+    useEffect(() => {
+        dispatch(clearSuccess());
+        dispatch(clearErrors());
+        dispatch(loadAreas());
+        dispatch(loadVillages());
+    }, []);
     return (
         <div className='signup'>
 
@@ -73,25 +87,25 @@ export default function SignUp() {
                                 <Form.Control type="text" placeholder="Enter Full Name" onChange={e => { setfullname(e.currentTarget.value) }} className="signup_input" />
 
                             </Form.Group>
-
-                            <Form.Group className="mb-3" >
-                                <Form.Label className='form-label'>ID / Passport Number</Form.Label>
-                                <Form.Control type="text" placeholder="Enter ID Number / Passport Number" onChange={e => { setidentification_number(e.currentTarget.value) }} className="signup_input" />
+                            <Form.Group className="mb-3">
+                                <Form.Label className='form-label'>Registration Number</Form.Label>
+                                <Form.Control type="text" placeholder="Enter your reg no." onChange={e => { setregistration_number(e.currentTarget.value) }} className="signup_input" />
 
                             </Form.Group>
+
                         </div>
                         <div className='form-rows'>
                             <Form.Group className="mb-3">
                                 <Form.Label className='form-label'>Phone Number</Form.Label>
                                 <InputGroup>
                                     <InputGroup.Text id="basic-addon1">+254</InputGroup.Text>
-                                    <Form.Control type="text" placeholder="700000000" onChange={e => { setcontact(e.currentTarget.value) }} className="signup_input"/>
+                                    <Form.Control type="text" placeholder="700000000" onChange={e => { setcontact(e.currentTarget.value) }} className="signup_input" />
                                 </InputGroup>
                             </Form.Group>
 
                             <Form.Group className="mb-3" >
                                 <Form.Label className='form-label'>Email</Form.Label>
-                                <Form.Control type="text" placeholder="Enter email" onChange={e => { setemail(e.currentTarget.value) }} className="signup_input"/>
+                                <Form.Control type="text" disabled className="signup_input" value={email}/>
 
                             </Form.Group>
                         </div>
@@ -121,18 +135,14 @@ export default function SignUp() {
                         <div className='form-rows'>
                             <Form.Group className="mb-3" >
                                 <Form.Label className='form-label'>Occupation</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your occupation" onChange={e => { setoccupation(e.currentTarget.value) }} className="signup_input"/>
+                                <Form.Control type="text" placeholder="Enter your occupation" onChange={e => { setoccupation(e.currentTarget.value) }} className="signup_input" />
 
                             </Form.Group>
-                            <Form.Group className="mb-3">
-                                <Form.Label className='form-label'>Registration Number</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your reg no." onChange={e => { setregistration_number(e.currentTarget.value) }} className="signup_input"/>
 
-                            </Form.Group>
                         </div>
-                        
+
                         <Button variant="success" type="submit"
-                            disabled={fullname && identification_number && contact && email && registration_number ? false : true}
+                            disabled={fullname && contact && email && registration_number ? false : true}
                         >
                             {auth.isLoading ? "Registering ....." : "Create Account"}
                         </Button>
@@ -144,6 +154,18 @@ export default function SignUp() {
                     </div>
                 </div>
             </Card>
+            <Modal size="sm" style={{marginTop:"40vh"}}
+                show={modalShow}
+                onHide={() => setmodalShow(true)}
+                aria-labelledby="example-modal-sizes-title-sm">
+                <Modal.Body>
+                    <Button variant="primary"
+                        onClick={() => signInWithGoogle()} size="lg" style={{ marginTop: "2rem", marginBottom: "5rem", width: "100%" }}>
+
+                        {auth.isLoading ? "Logging In ........" : "Signup in with Google"}
+                    </Button>
+                </Modal.Body>
+            </Modal>
 
         </div>
 

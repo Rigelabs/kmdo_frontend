@@ -8,7 +8,7 @@ var host = process.env.REACT_APP_API;
 var remote_host = "https://kmdo-backend.onrender.com/"
 //Register  Action
 export const userRegister = ({ contact, full_name, village, area, occupation,
-    email, identification_number, registration_number }) => async (dispatch) => {
+    email, registration_number }) => async (dispatch) => {
 
         dispatch({ type: actions.REGISTERING_USER });
 
@@ -20,7 +20,7 @@ export const userRegister = ({ contact, full_name, village, area, occupation,
             timeout: 5000
         }
         const data = {
-            full_name: full_name, identification_number: identification_number, contact: contact,
+            full_name: full_name, contact: contact,
             email: email, village: village, area: area, occupation: occupation,
             registration_number: registration_number
         }
@@ -46,7 +46,7 @@ export const userRegister = ({ contact, full_name, village, area, occupation,
     }
 
 //Register  Action
-export const userLogin = ({ contact, password }) => async (dispatch) => {
+export const userLogin = ({ email }) => async (dispatch) => {
     dispatch({ type: actions.LOGGING_USER });
     //Headers
     const config = {
@@ -56,7 +56,7 @@ export const userLogin = ({ contact, password }) => async (dispatch) => {
         timeout: 5000
     }
     const data = {
-        contact: contact, password: password
+        email: email
     }
     await axios.post(`${remote_host}auth/user/login`, data, config)
 

@@ -14,12 +14,12 @@ export default function Health() {
         <div>
           <ul>
             <li className='list_item'>
-              <h6 style={{ fontWeight: 'bold', color: 'blue' }}>Health Centers.</h6>
+              <h6 className='pillars_h6'>Health Centers.</h6>
               We are lobbying and advocating for the establishment of a health centre at 
               Karinga to serve Karinga, Kiamaingi and Matandara villages
             </li>
             <li className='list_item'>
-              <h6 style={{ fontWeight: 'bold', color: 'blue' }}>Awareness outreach.</h6>
+              <h6 className='pillars_h6'>Awareness outreach.</h6>
               Creating awareness for healthy living and healthy aging through good diet and exercise.
             </li>
             

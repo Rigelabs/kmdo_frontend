@@ -15,7 +15,7 @@ export default function Education() {
         <div>
           <ul>
             <li className='list_item'>
-              <h6 style={{ fontWeight: 'bold', color: 'blue' }}>Motivation for primary and high school learners.</h6>
+              <h6 className='pillars_h6'>Motivation for primary and high school learners.</h6>
               KMDO representatives give
               motivational talks to the learners especially those in the examination year.
               When examination results are released, KMDO rewards best performing candidates and
@@ -27,17 +27,17 @@ export default function Education() {
               and acquire mentors from the community. This is the flagship programme of the KMDO Education Committee.
             </li>
             <li className='list_item'>
-              <h6 style={{ fontWeight: 'bold', color: 'blue' }}>Improvement of school facilities.</h6>
+              <h6 className='pillars_h6'>Improvement of school facilities.</h6>
               KMDO works with other partners such as elected leaders, government and donors to improve various facilities
               in leaning institutions.
             </li>
             <li className='list_item'>
-              <h6 style={{ fontWeight: 'bold', color: 'blue' }}>Advocacy.</h6>
+              <h6 className='pillars_h6'>Advocacy.</h6>
               KMDO works with other partners such as elected leaders, government and donors to improve various facilities
               in leaning institutions.
             </li>
             <li className='list_item'>
-              <h6 style={{ fontWeight: 'bold', color: 'blue' }}>Financial support to needy learner.</h6>
+              <h6 className='pillars_h6'>Financial support to needy learner.</h6>
               KMDO raises funds from its members and other partners to support needy learners after thorough vetting and assessment of the needs. 
             </li>
           </ul>

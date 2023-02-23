@@ -1,0 +1,26 @@
+.pillar_content{
+    margin-top: 5rem;
+    
+}
+.pillar_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: darkblue;
+}
+.pillar_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 10vw;
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+.list_item{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}

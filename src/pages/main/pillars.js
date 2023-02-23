@@ -27,7 +27,7 @@ export default function Pillars() {
             Social Economic</div>
         </Card>
         <Card className='card-pillars' onClick={e=>navigate("/health")}>
-        <Card.Img variant="top" height="200px"  className="card-image" border src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1668241463/enhanced_health_s6djvg.jpg" />
+        <Card.Img variant="top" height="200px"  className="card-image" border src="https://res.cloudinary.com/dwnxsji2z/image/upload/v1677139810/website%20files/Community_health_bqefzk.png" />
         <div style={{margin:"auto"}}><BiDonateHeart color="green" size={40}/></div>
         <div style={{color:"green",fontSize:"22px",margin:'auto',fontWeight:"bold"}}>
             Health Support</div>

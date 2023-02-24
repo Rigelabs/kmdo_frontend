@@ -13,7 +13,6 @@ export const loadBoardmembers = () => async (dispatch) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        timeout:5000
     }
     await axios.get(`https://kmdo-backend.onrender.com/village/all`,config)
         .then(res => dispatch({
@@ -49,7 +48,6 @@ export const loadReports = () => async (dispatch) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        timeout:5000
     }
     await axios.get(`${remote_host}reports/all`,config)
         .then(res => dispatch({

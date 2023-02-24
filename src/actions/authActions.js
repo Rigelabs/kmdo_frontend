@@ -17,7 +17,7 @@ export const userRegister = ({ contact, full_name, village, area, occupation,
             headers: {
                 'Content-Type': 'application/json'
             },
-            timeout: 5000
+            
         }
         const data = {
             full_name: full_name, contact: contact,

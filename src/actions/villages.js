@@ -15,7 +15,6 @@ export const loadVillages = () => async (dispatch) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        timeout:5000
     }
     await axios.get(`${remote_host}village/all`,config)
         .then(res => dispatch({
@@ -51,7 +50,6 @@ export const loadAreas = () => async (dispatch) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        timeout:5000
     }
     await axios.get(`${remote_host}village/areas/all`,config)
         .then(res => dispatch({
@@ -140,6 +138,39 @@ export const areaAdd = ({ name,village,representative,authToken}) => async (disp
                 } else {
                     dispatch(
                         returnErrors(error.response.data, error.response.status, 'MEMBER-ADD-FAIL')
+                    )
+                    dispatch({ type: actions.ADDING_AREA_FAIL })
+                }
+            })
+    }
+export const updateArea = ({area_id,name,village,representative,authToken}) => async (dispatch) => {
+
+        dispatch({ type: actions.ADDING_AREA });
+
+        //Headers
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer " + authToken
+            },
+            timeout: 5000
+        }
+        const data = {area_id,name:name,village:village,representative:representative}
+        await axios.post(`${remote_host}village/area/update`, data, config)
+
+            .then(res => {
+                dispatch({ type: actions.ADDING_AREA_SUCCESS, payload: res.data })
+                dispatch(returnSuccess({message:"The area has been updated"}, res.status, 'AREA-ADD-SUCCESS'))
+            })
+            .catch(error => {
+                if (error.response === undefined) {
+                    dispatch(
+                        returnErrors({ message: "Server error, try again" }, 500, 'SERVER-ERROR')
+                    )
+                    dispatch({ type: actions.ADDING_AREA_FAIL })
+                } else {
+                    dispatch(
+                        returnErrors(error.response.data, error.response.status, 'AREA-ADD-FAIL')
                     )
                     dispatch({ type: actions.ADDING_AREA_FAIL })
                 }

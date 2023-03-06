@@ -40,6 +40,7 @@ export default function Testmonials() {
                     </div>
                 </div>
             </Card>
+            
             <Card className='testmonial-card'>
                 <div className='avatar'>
                     <img className='avatar' src='https://res.cloudinary.com/dwnxsji2z/image/upload/v1667111609/website%20files/Pngtree_teamwork_concept_people_work_together_6667639_fhjnq6.png' alt="avatar" />
@@ -52,6 +53,19 @@ export default function Testmonials() {
 
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', color: "green" }}>
                         <div>Muturu Mwangi Family</div>  <div>11th December 2022</div>
+                    </div>
+                </div>
+            </Card>
+            <Card className='testmonial-card'>
+                <div className='avatar'>
+                    <img className='avatar' src='https://res.cloudinary.com/dwnxsji2z/image/upload/v1667111609/website%20files/Pngtree_teamwork_concept_people_work_together_6667639_fhjnq6.png' alt="avatar" />
+                </div>
+                <div className='tesmonial-content'>
+                    <h5 style={{ fontWeight: 'bold', textAlign: 'center' }}>2022 CHRISTMAS GIFTING </h5>
+                    We the Family of Mr. Philip Kamenya most sincerely thank the Karinga Massive fraternity for the early Christmas gifts you gave our dad. Your deeds are not in vain and God shall surely bless you. We also take cognisance of the difficulties encountered by the team dispersed to deliver the good news. Your tireless efforts including having to remove your shoes and pushing the the car stuck in the mud cannot go unnoticed.
+                    We shall for ever remain indebted by your great desire to serve the community.
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', color: "green" }}>
+                        <div>Philip Kamenya Family</div>  <div>11th December 2022</div>
                     </div>
                 </div>
             </Card>
@@ -122,19 +136,7 @@ export default function Testmonials() {
                     </div>
                 </div>
             </Card>
-            <Card className='testmonial-card'>
-                <div className='avatar'>
-                    <img className='avatar' src='https://res.cloudinary.com/dwnxsji2z/image/upload/v1667111609/website%20files/Pngtree_teamwork_concept_people_work_together_6667639_fhjnq6.png' alt="avatar" />
-                </div>
-                <div className='tesmonial-content'>
-                    <h5 style={{ fontWeight: 'bold', textAlign: 'center' }}>2022 CHRISTMAS GIFTING </h5>
-                    We the Family of Mr. Philip Kamenya most sincerely thank the Karinga Massive fraternity for the early Christmas gifts you gave our dad. Your deeds are not in vain and God shall surely bless you. We also take cognisance of the difficulties encountered by the team dispersed to deliver the good news. Your tireless efforts including having to remove your shoes and pushing the the car stuck in the mud cannot go unnoticed.
-                    We shall for ever remain indebted by your great desire to serve the community.
-                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', color: "green" }}>
-                        <div>Philip Kamenya Family</div>  <div>11th December 2022</div>
-                    </div>
-                </div>
-            </Card>
+           
             <Card className='testmonial-card'>
                 <div className='avatar'>
                     <img className='avatar' src='https://res.cloudinary.com/dwnxsji2z/image/upload/v1667111609/website%20files/Pngtree_teamwork_concept_people_work_together_6667639_fhjnq6.png' alt="avatar" />

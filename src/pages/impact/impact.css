@@ -47,14 +47,15 @@
 }
 .testmonial-card{
     margin: 1rem;
-    min-width: 50vw;
+    min-width: 70vw;
     display: flex;
     flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .avatar{
     border-radius: 50%;
     width: 15vw;
-    
+    margin-top: 10px;
 }
 .tesmonial-content{
     margin: 0px 1rem;

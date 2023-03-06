@@ -7,7 +7,7 @@ export default function Counter() {
     <div className='counter'>
     <div className='counter-div'>
         <div>Members</div>
-        <CountUp end={450} duration={8} />
+        <CountUp end={477} duration={8} />
     </div>
     <div className='counter-div'>
         <div>Supported Families</div>

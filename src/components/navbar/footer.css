@@ -1,7 +1,6 @@
 .footer{
-   background-color: rgb(100, 215, 253);
-    position: absolute;
-    bottom: 0;
+   background-color: darkblue;
+ 
     width: 100%;
     color:white;
     display: flex;
@@ -32,9 +31,7 @@
 }
 @media only screen and (max-width:1200px) {
     .footer{
-        background-color: lightblue;
-        position: absolute;
-        bottom: 0;
+        background-color: darkblue;
         width: 100%;
         min-height: 8rem;
         display: flex;

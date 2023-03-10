@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
+import Footer from '../../components/navbar/footer';
 import NavBar from '../../components/navbar/navbar';
 import "./contactus.css";
 
@@ -42,7 +43,7 @@ export default function ContactUs() {
                 
                 </div>
             </div>
-          
+            <Footer/>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../components/navbar/footer';
 import NavBar from '../../components/navbar/navbar';
 import "./pillar.css";
 export default function Education() {
@@ -43,6 +44,7 @@ export default function Education() {
           </ul>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

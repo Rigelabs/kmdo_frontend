@@ -3,6 +3,7 @@ import aboutusReducer from './aboutusReducer';
 import authReducer from './authReducer';
 import boardReducer from './boardReducer';
 import errorReducer from './errorReducer';
+import programsReducer from './programsReducer';
 import successReducer from './successReducer';
 import utilitiesReducer from './utilitiesReducer';
 import villageReducer from './villagesReducer';
@@ -15,5 +16,6 @@ export default combineReducers({
   success:successReducer,
   auth:authReducer,
   about_us:aboutusReducer,
-  board:boardReducer
+  board:boardReducer,
+  programs:programsReducer
 });

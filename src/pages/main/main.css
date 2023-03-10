@@ -80,11 +80,16 @@
 
 }
 
+.ongoing_cards {
+    display: flex;
+    flex-direction: row;
+}
+
 .card-ongoing {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-    width: 25vw;
-    min-height: 20rem;
-    transition: transform .5s;
+    width: 30vw;
+    min-height: 30rem;
+    transition: transform .3s;
     /* Animation */
     margin-right: 1rem;
     animation: fadeInLeft;
@@ -93,6 +98,22 @@
     /* don't forget to set a duration! */
 }
 
+.card-ongoing:hover {
+    box-shadow: rgba(29, 185, 75, 0.25) 0px 30px 60px -12px inset, rgba(55, 122, 222, 0.3) 0px 18px 36px -18px inset;
+    transform: scale(1.04);
+    /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    cursor: pointer;
+
+}
+
+.card-ongoing-img {
+    height: 300px;
+    width: 100%;
+}
+.program-btn {
+    background-color: darkblue;
+    width: 50%;
+}
 .overlay {
     background: rgb(249, 249, 252);
     background: linear-gradient(90deg, rgba(249, 249, 252, 0) 3%, rgba(2, 16, 46, 0.8127626050420168) 100%);
@@ -173,31 +194,54 @@
         animation-duration: 2s;
         /* don't forget to set a duration! */
     }
-    
-.overlay {
-    background: rgb(249, 249, 252);
-    background: linear-gradient(90deg, rgba(249, 249, 252, 0) 3%, rgba(2, 16, 46, 0.8127626050420168) 100%);
-    width: 100vw;
-    height: 35vh;
-    display: flex;
-    justify-content: flex-end;
-    animation: fadeInLeft;
-    /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 3s;
-    /* don't forget to set a duration! */
-}
 
-.overlay-text {
-    opacity: 0.9;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    left: 0;
-    font-weight: 900;
-    color: whitesmoke;
-    width: 30vw;
-    margin: 2rem 1rem 10px 0px;
-    font-size: 16px;
-}
+    .ongoing_cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-ongoing {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        width: 95vw;
+        min-height: 20rem;
+        transition: transform .5s;
+        /* Animation */
+        margin-bottom: 1rem;
+        animation: fadeInLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
+        /* don't forget to set a duration! */
+    }
+
+    .program-btn {
+        background-color: darkblue;
+        width: 100%;
+    }
+
+    .overlay {
+        background: rgb(249, 249, 252);
+        background: linear-gradient(90deg, rgba(249, 249, 252, 0) 3%, rgba(2, 16, 46, 0.8127626050420168) 100%);
+        width: 100vw;
+        height: 35vh;
+        display: flex;
+        justify-content: flex-end;
+        animation: fadeInLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 3s;
+        /* don't forget to set a duration! */
+    }
+
+    .overlay-text {
+        opacity: 0.9;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        left: 0;
+        font-weight: 900;
+        color: whitesmoke;
+        width: 30vw;
+        margin: 2rem 1rem 10px 0px;
+        font-size: 16px;
+    }
 
 }

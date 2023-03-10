@@ -7,10 +7,11 @@ export default function CoreValues() {
  <div style={{fontSize:"32px",fontWeight:"bold",color:'teal'}}>Our Core Values</div>
         <div className='vission-content'>
           <ul className='core_values_ul'>
-            <div>
+            <div style={{marginRight:"20px"}}>
             <li>Integrity</li>
-            <li>Team Work</li>
             <li>Philanthropy</li>
+            <li>Team Work</li>
+            
             <li>Equity</li>
             </div>
             <div>
@@ -18,7 +19,7 @@ export default function CoreValues() {
             
             <li>Prosperity</li>
             <li>Transparency</li>
-            <li>Dignity and Respect</li>
+            <li>Dignity & Respect</li>
             </div>
           </ul>
         </div>

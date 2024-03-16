@@ -14,10 +14,11 @@
     justify-content:flex-end;
 }
 .nav-links{
-    font-size:18px;
+    font-size:20px;
     color:darkblue;
     font-weight: 700;
-    margin-left: 10px;
+    margin-left: 15px;
+    font-family: cursive;
 }
 .nav-links:hover{
     -ms-transform: scaleY(1.3); /* IE 9 */

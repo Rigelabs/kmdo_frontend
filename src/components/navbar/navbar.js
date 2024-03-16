@@ -32,12 +32,12 @@ export default function NavBar() {
             <Nav.Link className="nav-links" href="/">Home</Nav.Link>
             <Nav.Link className="nav-links" href="/about_us">Who We Are</Nav.Link>
             <Nav.Link className="nav-links" href="/impact">Our Impact</Nav.Link>
-            
+            <Nav.Link className="nav-links" href="/gallery">Gallery</Nav.Link>
             <Nav.Link className="nav-links" href="/contact_us">Get in touch</Nav.Link>
             <Nav.Link className="nav-links" href="/membership">Membership</Nav.Link>
             
             </Nav>
-            <Button onClick={e=>navigate("/donate")} className='donate-button' >Donate</Button>
+            <Button onClick={e=>navigate("/contact_us")} className='donate-button' >Donate</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

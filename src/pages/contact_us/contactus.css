@@ -1,8 +1,8 @@
 .main{
-    margin-top: 4.5rem;
+    margin-top: 5rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
-    color:black;
+    color:green;
     background-color: white;
 }
 .address{
@@ -19,6 +19,7 @@
     display:flex;
     flex-direction:row;
     justify-content:space-around;
+    width: 90vw;
 }
 .social_div{
     display: flex;

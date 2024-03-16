@@ -27,8 +27,8 @@ export default function Signin() {
       dispatch(userLogin({  email: user.email }))
       
     } catch (err) {
-      
-      alert("Sign in error, try again");
+      console.log(err)
+      alert("Sign in error, try again",err);
     }
   };
   useEffect(() => {
